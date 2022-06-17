@@ -25,7 +25,7 @@ def derive(n, y, t):
 
     dydt = np.zeros(n)
 
-    dydt[0] = -Ω     # α1/dt
+    dydt[0] = -Ω    # α1/dt
     dydt[1] = 0.0   # α2/dt
     dydt[2] = ω     # α3/dt
 

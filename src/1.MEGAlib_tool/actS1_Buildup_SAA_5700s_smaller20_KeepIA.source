@@ -1,0 +1,27 @@
+# Assembly file for the Background-NuSTAR-like-SSOrbit simulations
+ 
+Version         		 1
+Geometry        		 ../../mass-model/CZTprototypev13_checked/CZTv13.geo.setup
+DetectorTimeConstant     0.000005
+ 
+#Include Setup.source
+ 
+# Physics list
+PhysicsListHD                      qgsp-bic-hp
+PhysicsListEM                      LivermorePol
+DecayMode                          Buildup
+ 
+# Output formats
+StoreOnlyTriggeredEvents             false
+StoreCalibrated                      true
+StoreSimulationInfo                  true
+StoreSimulationInfoIonization        false
+DiscretizeHits                       true
+ 
+ 
+# The simulation run
+Run SpaceSim
+SpaceSim.FileName                  ActivationStep1_Buildup_SAA_5700s_smaller20_KeepIA
+SpaceSim.Time                      5700
+
+Include TrappedProtonsSpenvis_smaller20.partial.source
